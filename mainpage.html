@@ -1,0 +1,186 @@
+<!--pantallas de prueba en 1360x768 al 100% & 1920x1080 al 100%-->
+<!--añadir pantalla adaptativa-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>main</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.google.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+        <link rel="preload" href="styles.css" as="stylesheet">
+        <link rel="preload" href="normalize.css" as="stylesheet">
+            <link href="styles.css" rel="stylesheet">
+
+            <!--file manager-->
+            <!--https://www.bootdey.com/snippets/view/check-file-manager#html-->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css" integrity="sha512-0/rEDduZGrqo4riUlwqyuHDQzp2D1ZCgH/gFIfjMIL5az8so6ZiXyhf1Rg8i6xsjv+z/Ubc4tt1thLigEcu6Ug==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
+
+      
+        </head>
+
+
+  <body>
+
+    <p class="headermp"> OUTLINE VIDEO SERVER</p>
+    
+      <input class= "searchbar" type="USUARIO" style="border-radius: 45px" placeholder="Haz una busqueda..."size="30" > 
+
+      <!--  <img src="img/outline_search_white_24dp.png" alt="buscar" width="36" height="36"class="iconmp1">-->
+
+         <!--  <img src="img/outline_create_new_folder_white_24dp.png" alt="nueva carpeta" width="36" height="36" class="iconmp" > -->
+
+       <!--  <img src="img/outline_file_upload_white_24dp.png" alt="subir" width="36" height="36" class="iconmp1" > -->
+  
+ <!--      <div class="imgupload">
+<label for="file-input">
+    <img src="img/outline_file_upload_white_24dp.png" alt="subir" width="36" height="36" class="iconmp1"  >
+   </label>
+
+        <input id="file-input" type="file"style="display: none;"/>
+
+
+        botones activados con pointer
+        <img src="img/outline_grid_view_white_24dp.png" alt="grid" width="36" height="36"  >
+        
+        <img src="img/outline_view_list_white_24dp.png" alt="lista" width="36" height="36"  >-->
+    
+    </div>
+    
+
+
+
+                                            <!--file manager snippet-->
+<div class="container flex-grow-1 light-style container-p-y">
+    <div class="container-m-nx container-m-ny bg-lightest mb-3">
+
+
+        <hr class="m-0" />
+
+        <div class="file-manager-actions container-p-x py-2">
+            <div>
+                
+                <div class="imgupload">
+                    <label for="file-input">
+                        <img src="img/outline_file_upload_white_24dp.png" alt="subir" width="40" height="40" class="iconmp1"  >
+                       </label>
+                    
+                            <input id="file-input" type="file"style="display: none;"/>
+                         
+                        </div>
+            </div>
+            <!--botones de grid y lista-->
+            <div>
+
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-default icon-btn md-btn-flat"> <input type="radio" name="file-manager-view" value="file-manager-row-view" /> <span class="ion ion-md-menu"></span> </label>
+
+                    <label class="btn btn-default icon-btn md-btn-flat active"> <img src="img/outline_grid_view_white_24dp.png" input type="radio" name="file-manager-view" value="file-manager-col-view" checked=""width="36" height="36"  /> <span class="ion ion-md-apps"></span> </label>
+                    <label class="btn btn-default icon-btn md-btn-flat"> <input type="radio" name="file-manager-view" value="file-manager-row-view" /> <span class="ion ion-md-menu"></span> </label>
+
+                    <label class="btn btn-default icon-btn md-btn-flat"> <img src="img/outline_view_list_white_24dp.png"input type="radio" name="file-manager-view" value="file-manager-row-view" checked="" width="36" height="36" /> <span class="ion ion-md-menu"></span> </label>
+                </div>
+            </div>
+        </div>
+        <hr class="m-0" />
+    </div>
+
+    <div class="file-manager-container file-manager-col-view">
+        <div class="file-manager-row-header">
+            <div class="file-item-name pb-2">Filename</div>
+            <div class="file-item-changed pb-2">Changed</div>
+        </div>
+
+        <div class="file-item">
+            <div class="file-item-icon file-item-level-up fas fa-level-up-alt text-secondary"></div>
+            <a href="javascript:void(0)" class="file-item-name">
+             ...
+            </a>
+        </div>
+
+        <!-- mostrar en cuadros archivos-->
+        <div class="file-item">
+            <div class="file-item-select-bg bg-primary"></div>
+            <label class="file-item-checkbox custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" />
+                <span class="custom-control-label"></span>
+            </label>
+            <div class="file-item-img" style="background-image: url(https://assets.disneytravelbabble.com/2010/06/25085709/Capybaradoughnut.jpg);"></div>
+            <a href="javascript:void(0)" class="file-item-name">
+                Image-1.jpg <!-- -->
+            </a>
+
+
+            <div class="file-item-actions btn-group">
+                <button type="button" class="btn btn-default btn-sm rounded-pill icon-btn borderless md-btn-flat hide-arrow dropdown-toggle" data-toggle="dropdown"><i class="ion ion-ios-more"></i></button>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="javascript:void(0)">Rename</a>
+                    <a class="dropdown-item" href="javascript:void(0)">Move</a>
+                    <a class="dropdown-item" href="javascript:void(0)">Copy</a>
+                    <a class="dropdown-item" href="javascript:void(0)">Remove</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="file-item">
+            <div class="file-item-select-bg bg-primary"></div>
+            <label class="file-item-checkbox custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" />
+                <span class="custom-control-label"></span>
+            </label>
+            <div class="file-item-img" style="background-image: url(https://i.redd.it/vw6c9iwr6rk51.jpg);"></div>
+            <a href="javascript:void(0)" class="file-item-name">
+                Image-1.jpg
+            <div class="file-item-changed">02/14/2018</div>
+            <div class="file-item-actions btn-group">
+                <button type="button" class="btn btn-default btn-sm rounded-pill icon-btn borderless md-btn-flat hide-arrow dropdown-toggle" data-toggle="dropdown"><i class="ion ion-ios-more"></i></button>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="javascript:void(0)">Rename</a>
+                    <a class="dropdown-item" href="javascript:void(0)">Move</a>
+                    <a class="dropdown-item" href="javascript:void(0)">Copy</a>
+                    <a class="dropdown-item" href="javascript:void(0)">Remove</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="file-item">
+            <div class="file-item-select-bg bg-primary"></div>
+            <label class="file-item-checkbox custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" />
+                <span class="custom-control-label"></span>
+            </label>
+            <div class="file-item-img" style="background-image: url(https://pbs.twimg.com/media/ENowF3MXsAYiJ9P.jpg);"></div>
+            <a href="javascript:void(0)" class="file-item-name">
+                Image-1.jpg
+            </a>
+            <div class="file-item-changed">02/20/2018</div>
+            <div class="file-item-actions btn-group">
+                <button type="button" class="btn btn-default btn-sm rounded-pill icon-btn borderless md-btn-flat hide-arrow dropdown-toggle" data-toggle="dropdown"><i class="ion ion-ios-more"></i></button>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="javascript:void(0)">Rename</a>
+                    <a class="dropdown-item" href="javascript:void(0)">Move</a>
+                    <a class="dropdown-item" href="javascript:void(0)">Copy</a>
+                    <a class="dropdown-item" href="javascript:void(0)">Remove</a>
+                </div>
+            </div>
+        </div>
+
+
+ 
+ 
+
+ 
+
+    
+        
+
+
+ 
+         
+
+
+  </body>
