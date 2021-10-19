@@ -1,186 +1,304 @@
 <!--pantallas de prueba en 1360x768 al 100% & 1920x1080 al 100%-->
 <!--añadir pantalla adaptativa-->
+<!--quitar el radio button y poner un switch en las vistas-->
+<!--version 3.0-->
+<!--https://bootsnipp.com/snippets/00mG snippet grid/list-->
+
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>main</title>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="preconnect" href="https://fonts.google.com">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Outline Video Server</title>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+        <link rel="preconnect" href="https://fonts.google.com">   
+               
         <link rel="preload" href="styles.css" as="stylesheet">
         <link rel="preload" href="normalize.css" as="stylesheet">
-            <link href="styles.css" rel="stylesheet">
 
-            <!--file manager-->
-            <!--https://www.bootdey.com/snippets/view/check-file-manager#html-->
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css" integrity="sha512-0/rEDduZGrqo4riUlwqyuHDQzp2D1ZCgH/gFIfjMIL5az8so6ZiXyhf1Rg8i6xsjv+z/Ubc4tt1thLigEcu6Ug==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
+        <link href="styles.css" rel="stylesheet">
 
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="gridlistview.js"></script>
+    </head>
+
+   <body>
+    
+      <div class="columnleft" >
+
+        <p class="headermain"> OUTLINE VIDEO SERVER</p>   
+        <br>
+
+
+        <div class="image-upload">
+          <label for="file-input">
+          
+          </label>
+        
+          <input id="file-input" type="file" img src="img/outline_file_upload_white_24dp.png"/>
+        </div>
+
+
+
+
+        <img src="img/outline_create_new_folder_white_24dp.png" class="logohomemain">
+        <img src="img/outline_delete_outline_white_24dp.png" class="logohomemain">
+        <img src="img/outline_logout_white_24dp.png" class="logohomemain">
+
+      </div>
       
-        </head>
+      <div class="supercolumnright">
+        <div class="columnright" >
 
+            <div class="searchbarmain">
+            <input type="text" class="searchbar" autofocus="" placeholder=" Haz una búsqueda..." name="fuser" >
+            <!--<img src="img/outline_search_white_24dp.png" class="searchbut" width="25" height="25"  >-->
+            <br>
+            
+            </div>
+            
 
-  <body>
-
-    <p class="headermp"> OUTLINE VIDEO SERVER</p>
-    
-      <input class= "searchbar" type="USUARIO" style="border-radius: 45px" placeholder="Haz una busqueda..."size="30" > 
-
-      <!--  <img src="img/outline_search_white_24dp.png" alt="buscar" width="36" height="36"class="iconmp1">-->
-
-         <!--  <img src="img/outline_create_new_folder_white_24dp.png" alt="nueva carpeta" width="36" height="36" class="iconmp" > -->
-
-       <!--  <img src="img/outline_file_upload_white_24dp.png" alt="subir" width="36" height="36" class="iconmp1" > -->
-  
- <!--      <div class="imgupload">
-<label for="file-input">
-    <img src="img/outline_file_upload_white_24dp.png" alt="subir" width="36" height="36" class="iconmp1"  >
-   </label>
-
-        <input id="file-input" type="file"style="display: none;"/>
-
-
-        botones activados con pointer
-        <img src="img/outline_grid_view_white_24dp.png" alt="grid" width="36" height="36"  >
-        
-        <img src="img/outline_view_list_white_24dp.png" alt="lista" width="36" height="36"  >-->
-    
+            </div>
     </div>
-    
+
+        <div class="containerbox" >        
+                      
+<!--                      <div class="viewbuttons">
+              <button onclick="listView()"><i class="fa fa-bars" style="float: right; color:#393E46;" ></i>List</button>
+              <button onclick="gridView()"><i class="fa fa-th-large" style="float: right; color:#393E46;"></i>Grid</button>                     
+                      </div>
 
 
-
-                                            <!--file manager snippet-->
-<div class="container flex-grow-1 light-style container-p-y">
-    <div class="container-m-nx container-m-ny bg-lightest mb-3">
-
-
-        <hr class="m-0" />
-
-        <div class="file-manager-actions container-p-x py-2">
-            <div>
-                
-                <div class="imgupload">
-                    <label for="file-input">
-                        <img src="img/outline_file_upload_white_24dp.png" alt="subir" width="40" height="40" class="iconmp1"  >
-                       </label>
-                    
-                            <input id="file-input" type="file"style="display: none;"/>
-                         
+                      <div class="row">
+                        <div class="column" style="background-color:#aaa;">
+                          <img src="img/coconut.jpg" width="150px" height="150px">
+                          <p>coconut.jpg</p>
                         </div>
-            </div>
-            <!--botones de grid y lista-->
-            <div>
+                        
+                        <div class="column" style="background-color:#bbb;">
+                          <img src="img/coconut.jpg" width="150px" height="150px">
+                          <p>test2.jpg</p>
+                        </div>
 
-                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                    <label class="btn btn-default icon-btn md-btn-flat"> <input type="radio" name="file-manager-view" value="file-manager-row-view" /> <span class="ion ion-md-menu"></span> </label>
+                        <div class="column" style="background-color:#aaa;">
+                          <img src="img/coconut.jpg" width="150px" height="150px">
+                          <p>test2.jpg</p>
+                          </div>
 
-                    <label class="btn btn-default icon-btn md-btn-flat active"> <img src="img/outline_grid_view_white_24dp.png" input type="radio" name="file-manager-view" value="file-manager-col-view" checked=""width="36" height="36"  /> <span class="ion ion-md-apps"></span> </label>
-                    <label class="btn btn-default icon-btn md-btn-flat"> <input type="radio" name="file-manager-view" value="file-manager-row-view" /> <span class="ion ion-md-menu"></span> </label>
+                      </div 
+                                            <! --           inicio       grupo item                                -->
 
-                    <label class="btn btn-default icon-btn md-btn-flat"> <img src="img/outline_view_list_white_24dp.png"input type="radio" name="file-manager-view" value="file-manager-row-view" checked="" width="36" height="36" /> <span class="ion ion-md-menu"></span> </label>
-                </div>
-            </div>
-        </div>
-        <hr class="m-0" />
-    </div>
+                                            <div class="well well-sm">
 
-    <div class="file-manager-container file-manager-col-view">
-        <div class="file-manager-row-header">
-            <div class="file-item-name pb-2">Filename</div>
-            <div class="file-item-changed pb-2">Changed</div>
-        </div>
+                                             <div class="btn-group">
+                                                  <a href="#" id="list" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-th-list">
+                                                    </span>List</a> <a href="#" id="grid" class="btn btn-default btn-sm">
+                                                    <span class="glyphicon glyphicon-th"></span>Grid</a>
+                                              </div>
 
-        <div class="file-item">
-            <div class="file-item-icon file-item-level-up fas fa-level-up-alt text-secondary"></div>
-            <a href="javascript:void(0)" class="file-item-name">
-             ...
-            </a>
-        </div>
+                      <div id="products" class="row list-group">
+                        <div class="item  col-xs-4 col-lg-4">
+                            <div class="thumbnail">
+                                
+                              <img class="group list-group-image" src="img/coconut.jpg" alt="thumbnail" />
+                                
+                                <div class="caption">
+                                    <h4 class="group inner list-group-item-heading"> Product title</h4>
+                                    <p class="group inner list-group-item-text">
+                                        Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
 
-        <!-- mostrar en cuadros archivos-->
-        <div class="file-item">
-            <div class="file-item-select-bg bg-primary"></div>
-            <label class="file-item-checkbox custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" />
-                <span class="custom-control-label"></span>
-            </label>
-            <div class="file-item-img" style="background-image: url(https://assets.disneytravelbabble.com/2010/06/25085709/Capybaradoughnut.jpg);"></div>
-            <a href="javascript:void(0)" class="file-item-name">
-                Image-1.jpg <!-- -->
-            </a>
+                                </div>
+                            </div>
+                        </div>
+                                                   <!--                   grupo item                                -->
 
+                                                   <div id="products" class="row list-group">
+                                                    <div class="item  col-xs-4 col-lg-4">
+                                                        <div class="thumbnail">
+                                                            
+                                                          <img class="group list-group-image" src="img/coconut.jpg" alt="thumbnail" />
+                                                            
+                                                            <div class="caption">
+                                                                <h4 class="group inner list-group-item-heading"> Product title</h4>
+                                                                <p class="group inner list-group-item-text">
+                                                                    Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                                                                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                            
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                      <div id="products" class="row list-group">
+                        <div class="item  col-xs-4 col-lg-4">
+                            <div class="thumbnail">
+                                
+                              <img class="group list-group-image" src="img/coconut.jpg" alt="thumbnail" />
+                                
+                                <div class="caption">
+                                    <h4 class="group inner list-group-item-heading"> Product title</h4>
+                                    <p class="group inner list-group-item-text">
+                                        Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
 
-            <div class="file-item-actions btn-group">
-                <button type="button" class="btn btn-default btn-sm rounded-pill icon-btn borderless md-btn-flat hide-arrow dropdown-toggle" data-toggle="dropdown"><i class="ion ion-ios-more"></i></button>
-                <div class="dropdown-menu dropdown-menu-right">
-                    <a class="dropdown-item" href="javascript:void(0)">Rename</a>
-                    <a class="dropdown-item" href="javascript:void(0)">Move</a>
-                    <a class="dropdown-item" href="javascript:void(0)">Copy</a>
-                    <a class="dropdown-item" href="javascript:void(0)">Remove</a>
-                </div>
-            </div>
-        </div>
+                                </div>
+                            </div>
+                        </div>
 
-        <div class="file-item">
-            <div class="file-item-select-bg bg-primary"></div>
-            <label class="file-item-checkbox custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" />
-                <span class="custom-control-label"></span>
-            </label>
-            <div class="file-item-img" style="background-image: url(https://i.redd.it/vw6c9iwr6rk51.jpg);"></div>
-            <a href="javascript:void(0)" class="file-item-name">
-                Image-1.jpg
-            <div class="file-item-changed">02/14/2018</div>
-            <div class="file-item-actions btn-group">
-                <button type="button" class="btn btn-default btn-sm rounded-pill icon-btn borderless md-btn-flat hide-arrow dropdown-toggle" data-toggle="dropdown"><i class="ion ion-ios-more"></i></button>
-                <div class="dropdown-menu dropdown-menu-right">
-                    <a class="dropdown-item" href="javascript:void(0)">Rename</a>
-                    <a class="dropdown-item" href="javascript:void(0)">Move</a>
-                    <a class="dropdown-item" href="javascript:void(0)">Copy</a>
-                    <a class="dropdown-item" href="javascript:void(0)">Remove</a>
-                </div>
-            </div>
-        </div>
+                        <div id="products" class="row list-group">
+                          <div class="item  col-xs-4 col-lg-4">
+                              <div class="thumbnail">
+                                  
+                                <img class="group list-group-image" src="img/coconut.jpg" alt="thumbnail" />
+                                  
+                                  <div class="caption">
+                                      <h4 class="group inner list-group-item-heading"> Product title</h4>
+                                      <p class="group inner list-group-item-text">
+                                          Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                                          sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+  
+                                  </div>
+                              </div>
+                          </div>
 
-
-        <div class="file-item">
-            <div class="file-item-select-bg bg-primary"></div>
-            <label class="file-item-checkbox custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" />
-                <span class="custom-control-label"></span>
-            </label>
-            <div class="file-item-img" style="background-image: url(https://pbs.twimg.com/media/ENowF3MXsAYiJ9P.jpg);"></div>
-            <a href="javascript:void(0)" class="file-item-name">
-                Image-1.jpg
-            </a>
-            <div class="file-item-changed">02/20/2018</div>
-            <div class="file-item-actions btn-group">
-                <button type="button" class="btn btn-default btn-sm rounded-pill icon-btn borderless md-btn-flat hide-arrow dropdown-toggle" data-toggle="dropdown"><i class="ion ion-ios-more"></i></button>
-                <div class="dropdown-menu dropdown-menu-right">
-                    <a class="dropdown-item" href="javascript:void(0)">Rename</a>
-                    <a class="dropdown-item" href="javascript:void(0)">Move</a>
-                    <a class="dropdown-item" href="javascript:void(0)">Copy</a>
-                    <a class="dropdown-item" href="javascript:void(0)">Remove</a>
-                </div>
-            </div>
-        </div>
-
-
- 
- 
-
- 
-
+                          <div id="products" class="row list-group">
+                            <div class="item  col-xs-4 col-lg-4">
+                                <div class="thumbnail">
+                                    
+                                  <img class="group list-group-image" src="img/coconut.jpg" alt="thumbnail" />
+                                    
+                                    <div class="caption">
+                                        <h4 class="group inner list-group-item-heading"> Product title</h4>
+                                        <p class="group inner list-group-item-text">
+                                            Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                                            sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
     
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="products" class="row list-group">
+                              <div class="item  col-xs-4 col-lg-4">
+                                  <div class="thumbnail">
+                                      
+                                    <img class="group list-group-image" src="img/coconut.jpg" alt="thumbnail" />
+                                      
+                                      <div class="caption">
+                                          <h4 class="group inner list-group-item-heading"> Product title</h4>
+                                          <p class="group inner list-group-item-text">
+                                              Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                                              sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+      
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <div id="products" class="row list-group">
+                                <div class="item  col-xs-4 col-lg-4">
+                                    <div class="thumbnail">
+                                        
+                                      <img class="group list-group-image" src="img/coconut.jpg" alt="thumbnail" />
+                                        
+                                        <div class="caption">
+                                            <h4 class="group inner list-group-item-heading"> Product title</h4>
+                                            <p class="group inner list-group-item-text">
+                                                Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                                                sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+        
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="products" class="row list-group">
+                                  <div class="item  col-xs-4 col-lg-4">
+                                      <div class="thumbnail">
+                                          
+                                        <img class="group list-group-image" src="img/coconut.jpg" alt="thumbnail" />
+                                          
+                                          <div class="caption">
+                                              <h4 class="group inner list-group-item-heading"> Product title</h4>
+                                              <p class="group inner list-group-item-text">
+                                                  Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                                                  sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+          
+                                          </div>
+                                      </div>
+                                  </div>
+
+                                  <div id="products" class="row list-group">
+                                    <div class="item  col-xs-4 col-lg-4">
+                                        <div class="thumbnail">
+                                            
+                                          <img class="group list-group-image" src="img/coconut.jpg" alt="thumbnail" />
+                                            
+                                            <div class="caption">
+                                                <h4 class="group inner list-group-item-heading"> Product title</h4>
+                                                <p class="group inner list-group-item-text">
+                                                    Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                                                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+            
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="products" class="row list-group">
+                                      <div class="item  col-xs-4 col-lg-4">
+                                          <div class="thumbnail">
+                                              
+                                            <img class="group list-group-image" src="img/coconut.jpg" alt="thumbnail" />
+                                              
+                                              <div class="caption">
+                                                  <h4 class="group inner list-group-item-heading"> Product title</h4>
+                                                  <p class="group inner list-group-item-text">
+                                                      Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                                                      sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+              
+                                              </div>
+                                          </div>
+                                      </div>
+
+                                      <div id="products" class="row list-group">
+                                        <div class="item  col-xs-4 col-lg-4">
+                                            <div class="thumbnail">
+                                                
+                                              <img class="group list-group-image" src="img/coconut.jpg" alt="thumbnail" />
+                                                
+                                                <div class="caption">
+                                                    <h4 class="group inner list-group-item-heading"> Product title</h4>
+                                                    <p class="group inner list-group-item-text">
+                                                        Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                                                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                
+                                                </div>
+                                            </div>
+                                        </div>
+
+                            <div id="products" class="row list-group">
+                              <div class="item  col-xs-4 col-lg-4">
+                                  <div class="thumbnail">
+                                      
+                                    <img class="group list-group-image" src="img/coconut.jpg" alt="thumbnail" />
+                                      
+                                      <div class="caption">
+                                          <h4 class="group inner list-group-item-heading"> Product title</h4>
+                                          <p class="group inner list-group-item-text">
+                                              Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                                              sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+      
+                                      </div>
+                                  </div>
+                              </div>
+                              
+
+        </div>
         
 
-
- 
-         
-
+    
 
   </body>

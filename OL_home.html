@@ -1,59 +1,62 @@
+<!--incluir ventana modal de contraseña/user incorrecto-->
+<!--terminar el boton de visibilidad de password-->
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>HOME</title>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="preconnect" href="https://fonts.google.com">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+        <title>Otl_VS</title>
+
+        <link rel="preconnect" href="https://fonts.google.com">   
+               
         <link rel="preload" href="styles.css" as="stylesheet">
         <link rel="preload" href="normalize.css" as="stylesheet">
-            <link href="styles.css" rel="stylesheet">
-    
+
+        <link href="styles.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
 
 
-  <body>
+
+
 
 <header>
-  <br></br>
-    <h1 class="header"> OUTLINE VIDEO SERVER</h1>
-    
+    <img src="img/OLLogo_white.png" class="logohome" width="80" height="80"  >
+    <h1 class="header"> OUTLINE VIDEO SERVER</h1>   
 </header>
 
-<img src="ol_logo.png" alt="OUTLINE" width="150" height="150" class="centerimg">
+
+   
 
 
-
-<form>
-<div class="form">
-     <br></br>
-
-
-<div class="rectangleform">
-  <legend>  Usuario </legend>
-  <input type="USUARIO" style="border-radius: 35px" placeholder="" >
-
-    <br></br>
-
-  <legend>  Password</legend>
-  <input type="CONTRASEÑA" style="-webkit-text-security: square; border-radius: 35px"  placeholder="" >
+<body>
+ <div id="MyClockDisplay" class="clock" onload="showTime()">
+  <script src ="clock.js"></script></div>
   
-</div>
+  <div class=centerform>
 
-</form>
+   <input type="text" class="formuser" autofocus="" placeholder=" Usuario" name="fuser" ><br><br>
 
-</div>
+  <!--<div class="passwordcontainer">-->
 
-
-<div class= "extra">
-<p>[sample text]</p>
-<div>
-
-
-  </body>
+   <input id="password-field" type="password" autocomplete="current-password" class="formpassword" placeholder=" Password" name="password" style="-webkit-text-security: circle" ;>
+  <!-- <span class="material-icons">  visibility    </span> <div></div>-->
+   <br><br>
+  
 
 
+   <button class="enterbut" onClick="parent.location='mainpage.html'" value="facebook" formtarget="_blank">Entrar</button>
+
+  </div>
+ 
+
+
+</body>
+
+<p class="footerhome">¿No tienes cuenta?</p> 
+<div style="text-align:center">
+<a class="footerhome2"  href="registro.html">Registrarse.</a></div>
+<p class="footerhome3">Outline 2021.</p>
 </html>

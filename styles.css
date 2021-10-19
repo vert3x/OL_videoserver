@@ -1,424 +1,396 @@
 /* color reference codes
-   --white: #ffffff;
-    --black: #212121;
-    --primyellow: #ffc107;
-    --blue: #0097a7;
-    --gray: #757575;
+   --white: #EEEEEE;
+    --black: #222831
+    --lightblack: #393E46;
+    --orange: #D65A31;
+    paleta de color https://colorhunt.co/palette/222831393e46d65a31eeeeee   
     terminacion mp es para mainpage ex. formmp
+    logo arriba abajo texto, titulo en monserrat/bold, plogo y texto mas junto
+    rectangulo a menos de 35red
+    loginux-dribble
+
 */
 
-
+                                                               /*HOME CSS*/
    html
    {
+    display:-ms-flexbox;
     font-size: 100%;
-   }
 
-   body
-   {
-       font-size: 25px;
-       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-   
-       margin-top:20px;
-       background:#000000;
    }
 
    .header
    {
+    display:-ms-flexbox;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: lighter;
     text-align: center;
-    color: white;
-    font-size: 4rem;
-    font-weight: lighter;
-    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Montserrat', sans-serif;
    }
 
 
-   .headermp
-   {
-    margin-left: 1080px;
-    color: white;
-    font-size: 1.5rem;
-    font-weight: lighter;
-    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-   }
-   .centerimg
-   {
-    display:flex;
-    margin-left: auto;
-    margin-right: auto;
+   body
+   {  
+       display:-ms-flexbox;
+       font-size: 25px;
+       font-family: 'Montserrat', sans-serif;
+       margin-top:20px;
+background-image: url(img/1092758.jpg);
+      /* background:#393E46;*/
 
    }
 
-   .form
-   {
+.logohome
+{
+    display:-ms-flexbox;
+    padding-top: 60px;
+    padding-bottom: 15px;
+    display: block;
     margin: auto;
-
-    text-align:center;
-    font-size: 15px;
-    color: rgb(0, 0, 0);
-    padding: 5px;
-    width:450px;
-    height:200px;
-    background:rgb(255, 255, 255);
-    border-radius: 35px;
+    border-radius: 10px;
     
-    }
 
-    .formmp
-    {
+}
 
-     margin: auto;
-     text-align:left;
-     font-size: 15px;
-     color: rgb(0, 0, 0);
-     padding: 5px;
-     width: 1500px;
-     height:1000px;
-     background:rgb(255, 255, 255);
-     border-radius: 5px;
-     
-    }
+.formuser
+{   
+    display:-ms-flexbox;
+    padding: 7px;
+    border-radius: 8px;
+    background: #3a3a3a;
+    color: #EEEEEE;
 
-    .rectangleform
-    {
 
-        width:55%;
-        font-weight: lighter;
-        text-align:center;
-        padding: 5px;
-        width:435px;
-        height:200px;
-    }
+}
 
-    .rectangleformmp
-    {
-        margin: auto;
-        background-color: rgb(87, 88, 88);
-        font-weight: lighter;
-        text-align:left;
-        padding: 45px;
-        width:1260px;
-        height:0px;
-    }
-
-    .extramp
-    {       
-     font-weight: lighter;
-     text-align:left;
-     color: white;
-     font-size: 15px;
-    }
-
-.iconmp
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+    .formpassword
+{   
+    display:-ms-flexbox;
+    padding: 7px;
+    border-radius: 8px;
+    background: #3a3a3a;
+}
+    .passwordcontainer
 {
-    margin-left: 0px;
-    margin-right: auto;
-}
-
-.iconmp1
-{  
-    margin-left: 1110px;
-    margin-right: auto;
-}
-
-.imgupload > file-input
-{ 
-    display: none;
-}
-
-.imgupload img
-{
-    margin-left: 10px;
-
-    cursor:pointer;
-}
-.searchbar
-{
-    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color:#000000;
-    text-align:left;
-    font-weight:bold;
-    margin-left: 1090px;
-}
-
-
-
-                                                                /*file manager styles*/
-
-.dropdown-item
-{
-    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color:#d85555;
-    text-align:left;
-    font-weight:lighter;
-/* debe de colorearse cuando pase por arriba del boton*/
-}
-
-.file-manager-actions {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-}
-.file-manager-actions > * {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-}
-.file-manager-container {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-}
-.file-item {
-    position: relative;
-    z-index: 1;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
-    border: 1px solid #eee;
-    cursor: pointer;
-}
-.file-item:hover,
-.file-item.focused {
-    border-color: rgba(0, 0, 0, 0.05);
-}
-.file-item.focused {
-    z-index: 2;
-}
-.file-item * {
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-    text-decoration:none;
-}
-.dark-style .file-item:hover,
-.dark-style .file-item.focused {
-    border-color: rgba(255, 255, 255, 0.2);
-}
-.file-item-checkbox {
-    margin: 0 !important;
-}
-.file-item-select-bg {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    opacity: 0;
-}
-.file-item-img {
-    background-color: transparent;
-    background-position: center center;
-    background-size: cover;
-}
-.file-item-name {
-    display: block;
-    overflow: hidden;
-}
-.file-manager-col-view .file-item {
-    margin: 0 0.25rem 0.25rem 0;
-    padding: 1.25rem 0 1rem 0;
-    width: 9rem;
-    text-align: center;
-}
-[dir="rtl"] .file-manager-col-view .file-item {
-    margin-right: 0;
-    margin-left: 0.25rem;
-}
-.file-manager-col-view .file-item-img,
-.file-manager-col-view .file-item-icon {
-    display: block;
-    margin: 0 auto 0.75rem auto;
-    width: 4rem;
-    height: 4rem;
-    font-size: 2.5rem;
-    line-height: 4rem;
-}
-.file-manager-col-view .file-item-level-up {
-    font-size: 1.5rem;
-}
-.file-manager-col-view .file-item-checkbox,
-.file-manager-col-view .file-item-actions {
-    position: absolute;
-    top: 6px;
-}
-.file-manager-col-view .file-item-checkbox {
-    left: 6px;
-}
-[dir="rtl"] .file-manager-col-view .file-item-checkbox {
-    right: 6px;
-    left: auto;
-}
-.file-manager-col-view .file-item-actions {
-    right: 6px;
-}
-[dir="rtl"] .file-manager-col-view .file-item-actions {
-    right: auto;
-    left: 6px;
-}
-.file-manager-col-view .file-item-name {
+    padding: 10px;
     width: 100%;
-}
-.file-manager-col-view .file-manager-row-header,
-.file-manager-col-view .file-item-changed {
-    display: none;
-}
-.file-manager-row-view .file-manager-row-header,
-.file-manager-row-view .file-item {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
+    font-size: 16px;
+    border: 0;
+    outline: none;
+    color: #333;
     align-items: center;
-    margin: 0 0 0.125rem 0;
-    padding: 0.25rem 3rem 0.25rem 2.25em;
-    width: 100%;
 }
-[dir="rtl"] .file-manager-row-view .file-manager-row-header,
-[dir="rtl"] .file-manager-row-view .file-item {
-    padding-right: 2.25em;
-    padding-left: 3rem;
+    i
+{
+    margin: 0 10px;
+    color: #aaa;
+    cursor: default;
 }
-.file-manager-row-view .file-item-img,
-.file-manager-row-view .file-item-icon {
-    display: block;
-    margin: 0 1rem;
-    width: 2rem;
-    height: 2rem;
+
+
+
+.centerform
+{
     text-align: center;
-    font-size: 1.25rem;
-    line-height: 2rem;
+    display:-ms-flexbox;
+    padding: 30px;
+    padding-top: 30px;
+
 }
-.file-manager-row-view .file-item-level-up {
+
+
+.enterbut {
+    display:-ms-flexbox;
+    border: none;
+    color:#EEEEEE;
+    background-color: #D65A31;
+    padding-top: 0px;
+    padding: 8px 16px;
+    text-align: center;
     font-size: 1rem;
-}
-.file-manager-row-view .file-item-checkbox,
-.file-manager-row-view .file-item-actions {
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 5px 7px 9px #222831;
+  }
+
+ .clock {
+    display:-ms-flexbox;
     position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #EEEEEE;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
 }
-.file-manager-row-view .file-item-checkbox {
-    left: 10px;
+
+.footerhome
+{
+    display:-ms-flexbox;
+    color: #EEEEEE;
+    font-size: .8rem;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+
 }
-[dir="rtl"] .file-manager-row-view .file-item-checkbox {
-    right: 10px;
-    left: auto;
+
+.footerhome2
+{
+    display:-ms-flexbox;
+    color: #EEEEEE;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+
+    font-weight: bolder;
 }
-.file-manager-row-view .file-item-actions {
-    right: 10px;
+.footerhome3
+{
+    display:-ms-flexbox;
+    color: #EEEEEE;
+    font-size: .5rem;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-weight: lighter;
 }
-[dir="rtl"] .file-manager-row-view .file-item-actions {
-    right: auto;
-    left: 10px;
+
+/*showpassword*/
+.field-icon {
+  float: right;
+  margin-left: -25px;
+  margin-top: -25px;
+  position: relative;
+  z-index: 2;
 }
-.file-manager-row-view .file-item-changed {
-    display: none;
-    margin-left: auto;
-    width: 10rem;
+
+
+
+
+
+
+
+
+                                                            /*MAINPAGE CSS*/
+   .columnleft
+    {
+    display:-moz-box;
+    float: left;
+    width: 10%;
+    padding: 0px;
+    background: #222831;
+    border-radius: 5px;
+  }
+  .columnright
+  {
+  display:-moz-box;
+  float: left;
+  width: 90%;
+  padding: 0px 0px auto 0px;
+  background: #393E46;
+  border-radius: 5px;
+  padding-bottom: 10px;
+  
 }
-[dir="rtl"] .file-manager-row-view .file-item-changed {
-    margin-right: auto;
-    margin-left: 0;
+
+.containerbox
+{
+    display:-moz-box;
+    float: left;
+    width:auto;
+    padding: 0px 0px auto 0px;
+    background: #d3d3d3;
+    border-radius: 5px;
+    width: 89%;
+    height: 550px;
+    overflow:auto;
+    padding-left: 5px;
 }
-.file-manager-row-view .file-item-name {
-    width: calc(100% - 4rem);
+
+.mediafile
+{    display:-ms-flexbox;
+    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    width: 151px;
+    height: 160px;
+    background-color: #D65A31;
+  
 }
-.file-manager-row-view .file-manager-row-header {
-    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
-    font-weight: bold;
+
+
+
+.fileindividualtext
+{
+
+    background-color: #aaa;
+    color: #D65A31;
 }
-.file-manager-row-view .file-manager-row-header .file-item-name {
-    margin-left: 4rem;
+
+.column
+{
+    display: -ms-grid;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    width: 0px;
+    padding-right: 1px;
 }
-[dir="rtl"] .file-manager-row-view .file-manager-row-header .file-item-name {
-    margin-right: 4rem;
-    margin-left: 0;
+
+
+.logohomemain
+{
+    display:-ms-flexbox;
+    padding-top: 60px;
+    padding-bottom: 15px;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+    
+
 }
-.light-style .file-item-name {
-    color: #4e5155 !important;
-}
-.light-style .file-item.selected .file-item-select-bg {
-    opacity: 0.15;
-}
-@media (min-width: 768px) {
-    .light-style .file-manager-row-view .file-item-changed {
-        display: block;
+
+   .headermain
+   {
+    display:-ms-flexbox;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: lighter;
+    text-align:center;
+padding-top: 25px;
+    font-family: 'Montserrat', sans-serif;
+   }
+
+
+.leftbox
+   {
+    display:-ms-flexbox;
+    color: white;
+    font-size: .85rem;
+    font-weight: lighter;
+    text-align:center;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .rightboxtext
+  {
+    display:-ms-flexbox;
+    color: white;
+    font-size: .85rem;
+    font-weight: lighter;
+    text-align:center;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .searchbar
+  {
+    display:-ms-flexbox;
+      width: 500px;
+      border-radius: 5px;
+      padding-left: 5px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      text-align: center;
+      background: #ffffff;
+
+  }
+    .searchbut
+    {
+        display:-ms-flexbox;   
+
     }
-    .light-style .file-manager-row-view .file-item-name {
-        width: calc(100% - 15rem);
-    }
+
+  .searchbarmain
+  {
+    display:-ms-flexbox;
+    padding-left: 15px;
+    padding-top: 5px;
+  }
+
+  .supercolumnright
+  {
+      display:-ms-flexbox;
+      padding-left: 15px;
+  }
+
+  .image-upload>input {
+    display: -ms-flexbox;
+    cursor: pointer;
+
+  }
+
+  .viewbuttons
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
-@media (min-width: 992px) {
-    .light-style .file-manager-col-view .file-item-checkbox,
-    .light-style .file-manager-col-view .file-item-actions {
-        opacity: 0;
-    }
-    .light-style .file-manager-col-view .file-item:hover .file-item-checkbox,
-    .light-style .file-manager-col-view .file-item.focused .file-item-checkbox,
-    .light-style .file-manager-col-view .file-item.selected .file-item-checkbox,
-    .light-style .file-manager-col-view .file-item:hover .file-item-actions,
-    .light-style .file-manager-col-view .file-item.focused .file-item-actions,
-    .light-style .file-manager-col-view .file-item.selected .file-item-actions {
-        opacity: 1;
-    }
+
+/*container*/
+
+.glyphicon 
+{
+    display: -ms-flexbox;
+    margin-right:5px;
 }
-.material-style .file-item-name {
-    color: #4e5155 !important;
+.thumbnail
+{
+    display:-ms-flexbox;
+    margin-bottom: 20px;
+    padding: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
 }
-.material-style .file-item.selected .file-item-select-bg {
-    opacity: 0.15;
+
+.item.list-group-item
+{
+    display:-ms-flexbox;
+    float: none;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 10px;
 }
-@media (min-width: 768px) {
-    .material-style .file-manager-row-view .file-item-changed {
-        display: block;
-    }
-    .material-style .file-manager-row-view .file-item-name {
-        width: calc(100% - 15rem);
-    }
+.item.list-group-item:nth-of-type(odd):hover,.item.list-group-item:hover
+{
+    display:-ms-flexbox;
+    background: #428bca;
 }
-@media (min-width: 992px) {
-    .material-style .file-manager-col-view .file-item-checkbox,
-    .material-style .file-manager-col-view .file-item-actions {
-        opacity: 0;
-    }
-    .material-style .file-manager-col-view .file-item:hover .file-item-checkbox,
-    .material-style .file-manager-col-view .file-item.focused .file-item-checkbox,
-    .material-style .file-manager-col-view .file-item.selected .file-item-checkbox,
-    .material-style .file-manager-col-view .file-item:hover .file-item-actions,
-    .material-style .file-manager-col-view .file-item.focused .file-item-actions,
-    .material-style .file-manager-col-view .file-item.selected .file-item-actions {
-        opacity: 1;
-    }
+
+.item.list-group-item .list-group-image
+{
+    margin-right: 10px;
 }
-.dark-style .file-item-name {
-    color: #fff !important;
+.item.list-group-item .thumbnail
+{
+    margin-bottom: 0px;
 }
-.dark-style .file-item.selected .file-item-select-bg {
-    opacity: 0.15;
+.item.list-group-item .caption
+{
+    padding: 9px 9px 0px 9px;
 }
-@media (min-width: 768px) {
-    .dark-style .file-manager-row-view .file-item-changed {
-        display: block;
-    }
-    .dark-style .file-manager-row-view .file-item-name {
-        width: calc(100% - 15rem);
-    }
+.item.list-group-item:nth-of-type(odd)
+{
+    display:-ms-flexbox;
+    background: #eeeeee;
 }
-@media (min-width: 992px) {
-    .dark-style .file-manager-col-view .file-item-checkbox,
-    .dark-style .file-manager-col-view .file-item-actions {
-        opacity: 0;
-    }
-    .dark-style .file-manager-col-view .file-item:hover .file-item-checkbox,
-    .dark-style .file-manager-col-view .file-item.focused .file-item-checkbox,
-    .dark-style .file-manager-col-view .file-item.selected .file-item-checkbox,
-    .dark-style .file-manager-col-view .file-item:hover .file-item-actions,
-    .dark-style .file-manager-col-view .file-item.focused .file-item-actions,
-    .dark-style .file-manager-col-view .file-item.selected .file-item-actions {
-        opacity: 1;
-    }
+
+.item.list-group-item:before, .item.list-group-item:after
+{
+    display: table;
+    content: " ";
+}
+
+.item.list-group-item img
+{
+    float: left;
+}
+.item.list-group-item:after
+{
+    clear: both;
+}
+.list-group-item-text
+{
+    margin: 0 0 11px;
 }
