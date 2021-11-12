@@ -36,7 +36,9 @@
        font-size: 25px;
        font-family: 'Montserrat', sans-serif;
        margin-top:20px;
-background-image: url(img/1092758.jpg);
+background-image: url(img/y-so-serious.png);
+
+
       /* background:#393E46;*/
 
    }
@@ -220,8 +222,6 @@ background-image: url(img/1092758.jpg);
   
 }
 
-
-
 .fileindividualtext
 {
 
@@ -305,7 +305,7 @@ padding-top: 25px;
   .searchbarmain
   {
     display:-ms-flexbox;
-    padding-left: 15px;
+    padding-left: px;
     padding-top: 5px;
   }
 
@@ -316,8 +316,8 @@ padding-top: 25px;
   }
 
   .image-upload>input {
-    display: -ms-flexbox;
     cursor: pointer;
+    color: green;
 
   }
 
@@ -337,8 +337,8 @@ padding-top: 25px;
 .thumbnail
 {
     display:-ms-flexbox;
-    margin-bottom: 20px;
-    padding: 0px;
+    margin-bottom: 0px;
+    padding-top: 0px;
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
     border-radius: 0px;
@@ -350,17 +350,17 @@ padding-top: 25px;
     float: none;
     width: 100%;
     background-color: #fff;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 .item.list-group-item:nth-of-type(odd):hover,.item.list-group-item:hover
 {
     display:-ms-flexbox;
-    background: #428bca;
+    background: #aed9ff;
 }
 
 .item.list-group-item .list-group-image
 {
-    margin-right: 10px;
+    margin-right:0px;
 }
 .item.list-group-item .thumbnail
 {
@@ -390,7 +390,30 @@ padding-top: 25px;
 {
     clear: both;
 }
-.list-group-item-text
+
+
+.group-inner-list-group-item-text
 {
-    margin: 0 0 11px;
+    color: rgb(0, 17, 255);
+    text-align:center;
+
 }
+
+
+
+/*uploadbutton*/
+label {
+    background-color: rgb(104, 213, 113);
+    color: rgb(25, 140, 8);
+    padding: 0.5rem;
+    font-family: sans-serif;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  
+  #file-chosen{
+    margin-left: 0.3rem;
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+  }

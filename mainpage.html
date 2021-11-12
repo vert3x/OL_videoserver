@@ -3,302 +3,114 @@
 <!--quitar el radio button y poner un switch en las vistas-->
 <!--version 3.0-->
 <!--https://bootsnipp.com/snippets/00mG snippet grid/list-->
+<!--new branch incidencia-lista-productos-->
+
+<!--subir archivos a la lista jueves 7pm-->
 
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Outline Video Server</title>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Outline Video Server</title>
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
-        <link rel="preconnect" href="https://fonts.google.com">   
-               
-        <link rel="preload" href="styles.css" as="stylesheet">
-        <link rel="preload" href="normalize.css" as="stylesheet">
+  <link rel="preconnect" href="https://fonts.google.com">
 
-        <link href="styles.css" rel="stylesheet">
+  <link rel="preload" href="styles.css" as="stylesheet">
+  <link rel="preload" href="normalize.css" as="stylesheet">
 
-        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-        <script src="gridlistview.js"></script>
-    </head>
+  <link href="styles.css" rel="stylesheet">
 
-   <body>
-    
-      <div class="columnleft" >
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="gridlistview.js"></script>
+</head>
 
-        <p class="headermain"> OUTLINE VIDEO SERVER</p>   
+<body>
+
+  <div class="columnleft">
+
+    <p class="headermain"> OUTLINE VIDEO SERVER</p>
+    <br>
+
+    <img src="img/outline_create_new_folder_white_24dp.png" class="logohomemain">
+    <img src="img/outline_delete_outline_white_24dp.png" class="logohomemain">
+    <img src="img/outline_logout_white_24dp.png" class="logohomemain">
+
+  </div>
+
+  <div class="supercolumnright">
+    <div class="columnright">
+
+      <div class="searchbarmain">
+        <input type="text" class="searchbar" autofocus="" placeholder=" Haz una búsqueda..." name="fuser">
+        <!--<img src="img/outline_search_white_24dp.png" class="searchbut" width="25" height="25"  >-->
         <br>
 
+<!-- actual upload which is hidden -->
+<input type="file" id="actual-btn" hidden >
 
-        <div class="image-upload">
-          <label for="file-input">
-          
-          </label>
-        
-          <input id="file-input" type="file" img src="img/outline_file_upload_white_24dp.png"/>
-        </div>
+<!-- our custom upload button -->
+<label for="actual-btn">Subir archivo</label>
 
-
+<!-- name of file chosen -->
+<span id="file-chosen">No se ha seleccionado archivo.</span>
 
 
-        <img src="img/outline_create_new_folder_white_24dp.png" class="logohomemain">
-        <img src="img/outline_delete_outline_white_24dp.png" class="logohomemain">
-        <img src="img/outline_logout_white_24dp.png" class="logohomemain">
 
       </div>
-      
-      <div class="supercolumnright">
-        <div class="columnright" >
 
-            <div class="searchbarmain">
-            <input type="text" class="searchbar" autofocus="" placeholder=" Haz una búsqueda..." name="fuser" >
-            <!--<img src="img/outline_search_white_24dp.png" class="searchbut" width="25" height="25"  >-->
-            <br>
-            
-            </div>
-            
 
-            </div>
     </div>
+  </div>
 
-        <div class="containerbox" >        
-                      
-<!--                      <div class="viewbuttons">
-              <button onclick="listView()"><i class="fa fa-bars" style="float: right; color:#393E46;" ></i>List</button>
-              <button onclick="gridView()"><i class="fa fa-th-large" style="float: right; color:#393E46;"></i>Grid</button>                     
-                      </div>
+  <div class="containerbox">
 
 
-                      <div class="row">
-                        <div class="column" style="background-color:#aaa;">
-                          <img src="img/coconut.jpg" width="150px" height="150px">
-                          <p>coconut.jpg</p>
-                        </div>
-                        
-                        <div class="column" style="background-color:#bbb;">
-                          <img src="img/coconut.jpg" width="150px" height="150px">
-                          <p>test2.jpg</p>
-                        </div>
 
-                        <div class="column" style="background-color:#aaa;">
-                          <img src="img/coconut.jpg" width="150px" height="150px">
-                          <p>test2.jpg</p>
-                          </div>
+<!--boton gridlist-->
+    <div class="well well-sm">
+      <div class="btn-group">
+        <a href="#" id="list" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-th-list">
+          </span>List</a> <a href="#" id="grid" class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-th"></span>Grid</a>
+      </div>
 
-                      </div 
-                                            <! --           inicio       grupo item                                -->
+<!-- inicio item add-->
+      <div id="products" class="row list-group">
+        <div class="item  col-xs-4 col-lg-4">
+          <div class="thumbnail" >
+            <img class="group list-group-image" src="img/coconut.jpg" alt="thumbnail"width=100 />
+            <div class="caption">
+              <h4 class="group inner list-group-item-heading"> </h4>
 
-                                            <div class="well well-sm">
-
-                                             <div class="btn-group">
-                                                  <a href="#" id="list" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-th-list">
-                                                    </span>List</a> <a href="#" id="grid" class="btn btn-default btn-sm">
-                                                    <span class="glyphicon glyphicon-th"></span>Grid</a>
-                                              </div>
-
-                      <div id="products" class="row list-group">
-                        <div class="item  col-xs-4 col-lg-4">
-                            <div class="thumbnail">
-                                
-                              <img class="group list-group-image" src="img/coconut.jpg" alt="thumbnail" />
-                                
-                                <div class="caption">
-                                    <h4 class="group inner list-group-item-heading"> Product title</h4>
-                                    <p class="group inner list-group-item-text">
-                                        Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-
-                                </div>
-                            </div>
-                        </div>
-                                                   <!--                   grupo item                                -->
-
-                                                   <div id="products" class="row list-group">
-                                                    <div class="item  col-xs-4 col-lg-4">
-                                                        <div class="thumbnail">
-                                                            
-                                                          <img class="group list-group-image" src="img/coconut.jpg" alt="thumbnail" />
-                                                            
-                                                            <div class="caption">
-                                                                <h4 class="group inner list-group-item-heading"> Product title</h4>
-                                                                <p class="group inner list-group-item-text">
-                                                                    Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                                                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                            
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    
-                      <div id="products" class="row list-group">
-                        <div class="item  col-xs-4 col-lg-4">
-                            <div class="thumbnail">
-                                
-                              <img class="group list-group-image" src="img/coconut.jpg" alt="thumbnail" />
-                                
-                                <div class="caption">
-                                    <h4 class="group inner list-group-item-heading"> Product title</h4>
-                                    <p class="group inner list-group-item-text">
-                                        Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="products" class="row list-group">
-                          <div class="item  col-xs-4 col-lg-4">
-                              <div class="thumbnail">
-                                  
-                                <img class="group list-group-image" src="img/coconut.jpg" alt="thumbnail" />
-                                  
-                                  <div class="caption">
-                                      <h4 class="group inner list-group-item-heading"> Product title</h4>
-                                      <p class="group inner list-group-item-text">
-                                          Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                          sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-  
-                                  </div>
-                              </div>
-                          </div>
-
-                          <div id="products" class="row list-group">
-                            <div class="item  col-xs-4 col-lg-4">
-                                <div class="thumbnail">
-                                    
-                                  <img class="group list-group-image" src="img/coconut.jpg" alt="thumbnail" />
-                                    
-                                    <div class="caption">
-                                        <h4 class="group inner list-group-item-heading"> Product title</h4>
-                                        <p class="group inner list-group-item-text">
-                                            Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                            sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-    
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div id="products" class="row list-group">
-                              <div class="item  col-xs-4 col-lg-4">
-                                  <div class="thumbnail">
-                                      
-                                    <img class="group list-group-image" src="img/coconut.jpg" alt="thumbnail" />
-                                      
-                                      <div class="caption">
-                                          <h4 class="group inner list-group-item-heading"> Product title</h4>
-                                          <p class="group inner list-group-item-text">
-                                              Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                              sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-      
-                                      </div>
-                                  </div>
-                              </div>
-
-                              <div id="products" class="row list-group">
-                                <div class="item  col-xs-4 col-lg-4">
-                                    <div class="thumbnail">
-                                        
-                                      <img class="group list-group-image" src="img/coconut.jpg" alt="thumbnail" />
-                                        
-                                        <div class="caption">
-                                            <h4 class="group inner list-group-item-heading"> Product title</h4>
-                                            <p class="group inner list-group-item-text">
-                                                Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                                sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-        
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div id="products" class="row list-group">
-                                  <div class="item  col-xs-4 col-lg-4">
-                                      <div class="thumbnail">
-                                          
-                                        <img class="group list-group-image" src="img/coconut.jpg" alt="thumbnail" />
-                                          
-                                          <div class="caption">
-                                              <h4 class="group inner list-group-item-heading"> Product title</h4>
-                                              <p class="group inner list-group-item-text">
-                                                  Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                                  sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-          
-                                          </div>
-                                      </div>
-                                  </div>
-
-                                  <div id="products" class="row list-group">
-                                    <div class="item  col-xs-4 col-lg-4">
-                                        <div class="thumbnail">
-                                            
-                                          <img class="group list-group-image" src="img/coconut.jpg" alt="thumbnail" />
-                                            
-                                            <div class="caption">
-                                                <h4 class="group inner list-group-item-heading"> Product title</h4>
-                                                <p class="group inner list-group-item-text">
-                                                    Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-            
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div id="products" class="row list-group">
-                                      <div class="item  col-xs-4 col-lg-4">
-                                          <div class="thumbnail">
-                                              
-                                            <img class="group list-group-image" src="img/coconut.jpg" alt="thumbnail" />
-                                              
-                                              <div class="caption">
-                                                  <h4 class="group inner list-group-item-heading"> Product title</h4>
-                                                  <p class="group inner list-group-item-text">
-                                                      Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                                      sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-              
-                                              </div>
-                                          </div>
-                                      </div>
-
-                                      <div id="products" class="row list-group">
-                                        <div class="item  col-xs-4 col-lg-4">
-                                            <div class="thumbnail">
-                                                
-                                              <img class="group list-group-image" src="img/coconut.jpg" alt="thumbnail" />
-                                                
-                                                <div class="caption">
-                                                    <h4 class="group inner list-group-item-heading"> Product title</h4>
-                                                    <p class="group inner list-group-item-text">
-                                                        Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                
-                                                </div>
-                                            </div>
-                                        </div>
-
-                            <div id="products" class="row list-group">
-                              <div class="item  col-xs-4 col-lg-4">
-                                  <div class="thumbnail">
-                                      
-                                    <img class="group list-group-image" src="img/coconut.jpg" alt="thumbnail" />
-                                      
-                                      <div class="caption">
-                                          <h4 class="group inner list-group-item-heading"> Product title</h4>
-                                          <p class="group inner list-group-item-text">
-                                              Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                              sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-      
-                                      </div>
-                                  </div>
-                              </div>
-                              
-
+              <p class="group-inner-list-group-item-text">test</p>
+            </div>
+          </div>
         </div>
-        
+      </div>
+    </div>
+<!-- fin item add-->
+<div id="products" class="row list-group">
+  <div class="item  col-xs-4 col-lg-4">
+    <div class="thumbnail" >
+      <img class="group list-group-image" src="img/coconut.jpg" alt="thumbnail"width=100 />
+      <div class="caption">
+        <h4 class="group inner list-group-item-heading"> </h4>
 
-    
+        <p class="group-inner-list-group-item-text">test</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
 
-  </body>
+
+
+  </div>
+</body>
